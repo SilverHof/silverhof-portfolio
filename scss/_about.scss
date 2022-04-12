@@ -1,0 +1,207 @@
+.about {
+    background-color: #ffffff;
+    &__container {
+        max-width: 1200px;
+        padding: 0px 15px;
+        margin: 0 auto;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url(/img/about/back1.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center bottom;
+        margin-bottom: 50px;
+    }
+
+    &__content {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    &__title {
+        font-size: 58px;
+        line-height: 62px;
+        font-family: 'Oswald';
+        color: #ff2189;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-shadow: 3px -3px #aaf127;
+        margin-bottom: 20px;
+        -webkit-animation: tracking-in-contract-bck-bottom 1s both;
+	    animation: tracking-in-contract-bck-bottom 1s both;
+        
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 24px;
+        font-family: 'Oswald';
+        color: #4831d4;
+        font-weight: 400;
+    }
+
+    &__row {
+        display: flex;
+        gap: 35px;
+    }
+
+    &__column {
+        background-color: #ccf381;
+        max-width: 350px;
+        padding: 15px;
+        color: #4831d4;
+        font-size: 16px;
+        line-height: 20px;
+        font-family: 'Oswald';
+        color: #4831d4;
+        font-weight: 400;
+    }
+
+    &__image-box {
+        
+        width: 400px;
+        height: 400px;
+        position: relative;
+        
+    }
+
+    &__cube-block-one {
+        height: 250px;
+        width: 250px;
+        border: 5px solid #4831d4;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    &__cube-block-two {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 250px;
+        width: 250px;
+        border: 5px solid #ccf381;
+    }
+
+    &__image-item {
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+        z-index: 5;
+        width: 350px;
+        height: 350px;
+        background-image: url(/img/about/profile1.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: 3px solid rgb(110, 110, 110);
+        
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media (max-width: 1200px) {
+    .about__image-box {
+        width: calc(300px + (400 - 300) * ((100vw - 320px) / (1200 - 320)));
+        height: calc(300px + (400 - 300) * ((100vw - 320px) / (1200 - 320)));
+    }
+    
+    .about__cube-block-one {
+        width: calc(180px + (250 - 180) * ((100vw - 320px) / (1200 - 320)));
+        height: calc(180px + (250 - 180) * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    .about__cube-block-two {
+        width: calc(180px + (250 - 180) * ((100vw - 320px) / (1200 - 320)));
+        height: calc(180px + (250 - 180) * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    .about__image-item {
+        width: calc(270px + (350 - 270) * ((100vw - 320px) / (1200 - 320))) ;
+        height: calc(270px + (350 - 270) * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    .about__title {
+        font-size: calc(36px + (58 - 36) * ((100vw - 320px) / (1200 - 320)));
+        line-height: calc(42px + (62 - 42) * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    .about__text {  
+        font-size: calc(16px + (20- 16) * ((100vw - 320px) / (1200 - 320)));
+        line-height: calc(20px + (24 - 20) * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    .about__content {
+        padding-top: calc(30px + (100 - 30) * ((100vw - 320px) / (1200 - 320)));
+        padding-bottom: calc(30px + (100 - 30) * ((100vw - 320px) / (1200 - 320)));
+    }
+}
+
+/* Medium Devices, Desktops */
+@media (max-width: 991.98px) {
+    .about__inner {
+        flex-direction: column;
+        justify-content: none;
+    }
+
+    .about__content {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .about__image-box {
+        margin-top: 0;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media (max-width: 479.98px) {
+    .about__row {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+
+// @-webkit-keyframes tracking-in-contract-bck-bottom {
+//     0% {
+//       letter-spacing: 1em;
+//       -webkit-transform: translateZ(400px) translateY(300px);
+//               transform: translateZ(400px) translateY(300px);
+//       opacity: 0;
+//     }
+//     40% {
+//       opacity: 0.6;
+//     }
+//     100% {
+//       -webkit-transform: translateZ(0) translateY(0);
+//               transform: translateZ(0) translateY(0);
+//       opacity: 1;
+//     }
+// }
+
+//  @keyframes about__title {
+//     0% {
+//       letter-spacing: 1em;
+//       -webkit-transform: translateZ(400px) translateY(300px);
+//         transform: translateZ(400px) translateY(300px);
+//       opacity: 0;
+//     }
+//     40% {
+//       opacity: 0.6;
+//     }
+//     100% {
+//       -webkit-transform: translateZ(0) translateY(0);
+//               transform: translateZ(0) translateY(0);
+//       opacity: 1;
+//     }
+// }
